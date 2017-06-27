@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>Servlet2</servlet-name>
+        <servlet-class>Servlet2</servlet-class>
+        <init-param>
+            <param-name>adminName</param-name>
+            <param-value>Sanil</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ListenerTester</servlet-name>
+        <servlet-class>ListenerTester</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ListenerTester</servlet-name>
+        <url-pattern>/ListenerTester</url-pattern>
+    </servlet-mapping>
+
+    <listener>
+        <listener-class>MyServletContextListener</listener-class>
+    </listener>
+
+    <context-param>
+        <param-name>breed</param-name>
+        <param-value>Golden retriever</param-value>
+    </context-param>
+
+    <servlet-mapping>
+        <servlet-name>Servlet2</servlet-name>
+        <url-pattern>/Servlet2</url-pattern>
+    </servlet-mapping>
+
+</web-app>
